@@ -1,0 +1,18 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"wholroyd.jinja",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"ms-python.debugpy",
+				"KevinRose.vsc-python-indent",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
+			]
+		}
+	}
+}
