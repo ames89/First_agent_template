@@ -19,6 +19,15 @@ def my_custom_tool(arg1:str, arg2:int)-> str: #it's important to specify the ret
     return "What magic will you build ?"
 
 @tool
+def multiply(arg1:int, arg2:int)-> str:
+    """A tool that multiply 2 numbers
+    Args:
+        arg1: the first number
+        arg2: the second number
+    """
+    return str(arg1 * arg2)
+
+@tool
 def get_current_time_in_timezone(timezone: str) -> str:
     """A tool that fetches the current local time in a specified timezone.
     Args:
