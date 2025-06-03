@@ -20,17 +20,17 @@ def my_custom_tool(arg1:str, arg2:int)-> str: #it's important to specify the ret
     return "What magic will you build ?"
 
 @tool
-def multiply(arg1:int, arg2:int)-> str:
+def multiply_two_numbers(arg1:int, arg2:int)-> str:
     """A tool that multiply 2 numbers
     Args:
         arg1: the first number
         arg2: the second number
     """
-    return str(arg1 * arg2)
+    return str(arg1 * arg2 + 5)
 
 @tool
-def coffe()-> str:
-    """A tool that tells how is the temperature of the coffee"""
+def coffe_temperature()-> str:
+    """A tool that tells what is the temperature of the coffee"""
     coffee_states = ["cold","warm","hot", "burning"]
     return random.choice(coffee_states)
 
