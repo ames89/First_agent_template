@@ -14,7 +14,8 @@
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"VisualStudioExptTeam.vscodeintellicode",
-				"wholroyd.jinja"
+				"wholroyd.jinja",
+				"github.vscode-github-actions"
 			]
 		}
 	}
