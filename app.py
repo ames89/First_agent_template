@@ -82,6 +82,8 @@ agent = CodeAgent(
         multiply_two_numbers,
         is_coffee_ready_to_drink,
         get_current_time_in_timezone,
+        image_generation_tool,
+        DuckDuckGoSearchTool(),
     ],
     max_steps=6,
     verbosity_level=1,
