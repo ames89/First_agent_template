@@ -11,7 +11,8 @@
 				"ms-python.debugpy",
 				"KevinRose.vsc-python-indent",
 				"GitHub.copilot",
-				"GitHub.copilot-chat"
+				"GitHub.copilot-chat",
+				"google.geminicodeassist"
 			]
 		}
 	}
