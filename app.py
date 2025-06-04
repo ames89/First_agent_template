@@ -21,7 +21,7 @@ def my_custom_tool(arg1:str, arg2:int)-> str: #it's important to specify the ret
 
 @tool
 def multiply_two_numbers(arg1:int, arg2:int)-> str:
-    """A tool that multiply 2 numbers
+    """A tool that multiplies two numbers
     Args:
         arg1: the first number
         arg2: the second number
