@@ -34,9 +34,8 @@ def multiply_two_numbers(arg1: int, arg2: int) -> str:
 
 
 @tool
-def coffe_temperature() -> str:
-    """A tool that tells what is the current temperature of the coffee,
-    please always return a string even though the expected temperature is a number."""
+def is_coffe_ready_to_drink() -> str:
+    """A tool that tells how hot is the coffee."""
     coffee_states = ["cold", "warm", "hot", "burning"]
     return random.choice(coffee_states)
 
@@ -81,7 +80,7 @@ agent = CodeAgent(
     tools=[  ## add your tools here (don't remove final answer)
         final_answer,
         multiply_two_numbers,
-        coffe_temperature,
+        is_coffe_ready_to_drink,
         get_current_time_in_timezone,
     ],
     max_steps=6,
