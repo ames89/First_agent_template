@@ -4,16 +4,17 @@
 		"vscode": {
 			"extensions": [
 				"eamodio.gitlens",
-				"VisualStudioExptTeam.vscodeintellicode",
-				"wholroyd.jinja",
-				"ms-python.vscode-pylance",
-				"ms-python.python",
-				"ms-python.debugpy",
-				"KevinRose.vsc-python-indent",
-				"GitHub.copilot",
 				"GitHub.copilot-chat",
+				"GitHub.copilot",
 				"google.geminicodeassist",
-				"Gxl.git-graph-3"
+				"Gxl.git-graph-3",
+				"KevinRose.vsc-python-indent",
+				"ms-python.black-formatter",
+				"ms-python.debugpy",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"wholroyd.jinja"
 			]
 		}
 	}
