@@ -1,4 +1,4 @@
-from smolagents import CodeAgent,DuckDuckGoSearchTool, HfApiModel,load_tool,tool
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel, load_tool, tool
 import datetime
 import random
 import requests
@@ -8,10 +8,13 @@ from tools.final_answer import FinalAnswerTool
 
 from Gradio_UI import GradioUI
 
+
 # Below is an example of a tool that does nothing. Amaze us with your creativity !
 @tool
-def my_custom_tool(arg1:str, arg2:int)-> str: #it's important to specify the return type
-    #Keep this format for the description / args / args description but feel free to modify the tool
+def my_custom_tool(
+    arg1: str, arg2: int
+) -> str:  # it's important to specify the return type
+    # Keep this format for the description / args / args description but feel free to modify the tool
     """A tool that does nothing yet
     Args:
         arg1: the first argument
@@ -19,8 +22,9 @@ def my_custom_tool(arg1:str, arg2:int)-> str: #it's important to specify the ret
     """
     return "What magic will you build ?"
 
+
 @tool
-def multiply_two_numbers(arg1:int, arg2:int)-> str:
+def multiply_two_numbers(arg1: int, arg2: int) -> str:
     """A tool that multiplies two numbers
     Args:
         arg1: the first number
@@ -28,11 +32,14 @@ def multiply_two_numbers(arg1:int, arg2:int)-> str:
     """
     return str(arg1 * arg2 + 5)
 
+
 @tool
-def coffe_temperature()-> str:
-    """A tool that tells what is the temperature of the coffee"""
-    coffee_states = ["cold","warm","hot", "burning"]
+def coffe_temperature() -> str:
+    """A tool that tells what is the current temperature of the coffee,
+    please always return a string even though the expected temperature is a number."""
+    coffee_states = ["cold", "warm", "hot", "burning"]
     return random.choice(coffee_states)
+
 
 @tool
 def get_current_time_in_timezone(timezone: str) -> str:
@@ -56,29 +63,34 @@ final_answer = FinalAnswerTool()
 # model_id='https://pflgm2locj2t89co.us-east-1.aws.endpoints.huggingface.cloud'
 
 model = HfApiModel(
-max_tokens=2096,
-temperature=0.5,
-model_id='Qwen/Qwen2.5-Coder-32B-Instruct',# it is possible that this model may be overloaded
-custom_role_conversions=None,
+    max_tokens=2096,
+    temperature=0.5,
+    model_id="Qwen/Qwen2.5-Coder-32B-Instruct",  # it is possible that this model may be overloaded
+    custom_role_conversions=None,
 )
 
 
 # Import tool from Hub
 image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
 
-with open("prompts.yaml", 'r') as stream:
+with open("prompts.yaml", "r") as stream:
     prompt_templates = yaml.safe_load(stream)
 
 agent = CodeAgent(
     model=model,
-    tools=[final_answer,multiply_two_numbers,coffe_temperature,get_current_time_in_timezone], ## add your tools here (don't remove final answer)
+    tools=[  ## add your tools here (don't remove final answer)
+        final_answer,
+        multiply_two_numbers,
+        coffe_temperature,
+        get_current_time_in_timezone,
+    ],
     max_steps=6,
     verbosity_level=1,
     grammar=None,
     planning_interval=None,
     name=None,
     description=None,
-    prompt_templates=prompt_templates
+    prompt_templates=prompt_templates,
 )
 
 
