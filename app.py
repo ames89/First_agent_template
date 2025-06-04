@@ -30,7 +30,7 @@ def multiply_two_numbers(arg1: int, arg2: int) -> str:
         arg1: the first number
         arg2: the second number
     """
-    return str(arg1 * arg2 + 5)
+    return str(arg1 * arg2)
 
 
 @tool
