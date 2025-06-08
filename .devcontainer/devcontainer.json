@@ -6,6 +6,7 @@
 				"eamodio.gitlens",
 				"GitHub.copilot-chat",
 				"GitHub.copilot",
+				"github.vscode-github-actions",
 				"google.geminicodeassist",
 				"Gxl.git-graph-3",
 				"KevinRose.vsc-python-indent",
@@ -13,9 +14,9 @@
 				"ms-python.debugpy",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
+				"streetsidesoftware.code-spell-checker",
 				"VisualStudioExptTeam.vscodeintellicode",
-				"wholroyd.jinja",
-				"github.vscode-github-actions"
+				"wholroyd.jinja"
 			]
 		}
 	}
